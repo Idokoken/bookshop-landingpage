@@ -1,0 +1,145 @@
+:root {
+ --modal-duration: 1s;
+ --primary-color: #A12EB3;
+ --secondary-color: #5E5381;
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: san, san-serif, helvetica;
+	margin: 0;
+	padding: 0;
+	transition: transform 0.3s ease;
+}
+
+body .show-nav {
+	/* same as nav width */
+	transform: translate(200px);
+}
+
+nav {
+	background-color: var(--primary-color);
+	width: 200px;
+	height: 100vh;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+ transform: translateX(-100%); 
+}
+nav .logo {
+	text-align: center;
+	margin-top: 2rem;
+}
+nav div img {
+	width: 50px;
+	border-radius: 50%;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li {
+	border-bottom: 2px solid black;
+	margin-bottom: 0.5rem;
+	font-size: 2rem;
+	padding: 20px;
+}
+nav ul li:first-of-type {
+border-top: 2px solid black;
+}
+nav ul li a:hover {
+	text-decoration: underline;-
+}
+header {
+	background-color: var(--secondary-color);
+	text-align: center;
+}
+
+h3 {
+	color: blue;
+}
+
+header .menu {
+	position: relative;
+	margin: 0;
+	padding: 10px;
+}
+
+header .menu button {
+	background-color: var(--secondary-color);
+	padding: 8px 12px;
+	margin: 5px;
+	cursor: pointer;
+	color: white;
+	font-size: 2rem;
+	border-radius: 10px;
+}
+.toggle {
+	background-color: rgba(0, 0, 0, 0.7);
+	font-size: 1.2rem;
+	font-weight: 900;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.cta-btn{
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+.container {
+	margin: 0 auto;
+	padding: 5px;
+	min-width: 100%;
+	width: 850px;	
+}
+
+.modal-container {
+ display: none; 
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-container .show-modal {
+	display: block;
+}
+
+.modal {
+	background-color: #fff;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 100%;
+	width: 400px;
+	animation-name: modalopen;
+	animation-duration: var(--modal-duration);
+}
+.modal-head {
+	background-color: var(--primary-color);
+	padding: 15px;
+	color: #fff;
+}
+.modal-head h3 {
+	margin: 0;
+	border-bottom: 1px solid #5D2727;
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* home color #828 */
